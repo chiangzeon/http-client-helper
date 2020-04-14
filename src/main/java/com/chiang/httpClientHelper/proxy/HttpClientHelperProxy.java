@@ -56,7 +56,16 @@ public class HttpClientHelperProxy implements InvocationHandler {
     private Object execute(Method method, Object[] args) throws IllegalAccessException, InvocationTargetException, IOException, InstantiationException {
         Map<Method, RequestInfo> requestInfos = (Map<Method, RequestInfo>) mappings.get(REQUEST_INFOS);
         if (!requestInfos.containsKey(method)) {
-            return method.invoke(interfaceType, args);
+            String name = method.getName();
+            if (name.equals("hashCode")){
+                return hashCode();
+            }else if (name.equals("toString")){
+                return toString();
+            }else if (name.equals("equals")){
+                return equals(args[0]);
+            }else{
+                return method.invoke(interfaceType, args);
+            }
         }
         RequestInfo requestInfo = requestInfos.get(method);
         Client clientInfo = (Client) mappings.get(CLIENT_INFO);
