@@ -24,5 +24,6 @@ public class BaoYeTest {
         baoYeReqBody.setFile(new File("D:\\微信文件\\WeChat Files\\Clever09294418\\FileStorage\\File\\2020-04\\58567879-上海报业集团.pdf"));
         String parse1 = baoYe.parse(baoYeReqBody);
         System.out.println(parse1);
+        System.out.println(baoYe);
     }
 }

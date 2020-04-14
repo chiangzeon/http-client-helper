@@ -32,7 +32,9 @@ public class HttpClientHelperProxy implements InvocationHandler {
 
     private Map<String, Object> mappings;
 
-
+    public String toString(){
+        return super.toString();
+    }
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         try {
             return execute(method, args);
