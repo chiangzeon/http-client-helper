@@ -1,0 +1,6 @@
+com.chiang.httpClientHelper.request.GetMethod
+com.chiang.httpClientHelper.request.PostMethod
+com.chiang.httpClientHelper.request.PutMethod
+com.chiang.httpClientHelper.request.contentType.JSONData
+com.chiang.httpClientHelper.request.contentType.URLEncodedData
+com.chiang.httpClientHelper.request.contentType.FormData
